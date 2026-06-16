@@ -28,7 +28,7 @@ function LiveClock() {
     const update = () => {
       const now = new Date();
       const formatted = now.toLocaleTimeString("en-US", {
-        timeZone: "America/Los_Angeles",
+        timeZone: "Asia/Kolkata",
         hour: "2-digit",
         minute: "2-digit",
         hour12: false,
@@ -87,7 +87,7 @@ export default function KymaNav() {
     <>
       <header
         className={cn(
-          "fixed top-[2em] left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-50",
+          "fixed top-[2em] left-1/2 -translate-x-1/2 w-[90%] md:max-w-[800px] z-50 font-mono",
           "rounded-xl border border-white/10",
           "transition-all duration-400",
           scrolled || isOpen
@@ -132,6 +132,9 @@ export default function KymaNav() {
             transition={{ duration: 0.65, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 w-screen h-screen z-40 bg-[#0d0d0d] flex"
           >
+            <div className="absolute top-[4.5rem] right-6 md:hidden text-[11px] uppercase tracking-[0.14em] text-white/40">
+              <LiveClock />
+            </div>
             <div className="flex-1 flex flex-col justify-end px-10 pb-16 pt-24 max-md:px-6">
               <div className="flex flex-col gap-1 group">
                 {navLinks.map((link, i) => (
@@ -154,7 +157,7 @@ export default function KymaNav() {
                 ))}
               </div>
 
-              <div className="flex gap-8 mt-12">
+              <div className="flex gap-8 mt-12 flex-wrap">
                 {socialLinks.map((social, i) => (
                   <motion.a
                     key={social.label}

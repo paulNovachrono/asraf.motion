@@ -25,7 +25,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <main className="overflow-x-hidden">
       <Hero />
       <MarqueeStrip />
       <SelectedWork />
@@ -49,6 +49,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

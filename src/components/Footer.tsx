@@ -76,14 +76,14 @@ export default function Footer() {
                 Thank you for subscribing!
               </p>
             ) : (
-              <div className="flex border border-hairline">
+              <div className="flex border border-hairline max-sm:w-full">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="bg-transparent px-4 py-3 font-mono text-xs tracking-[0.2em] outline-none placeholder:text-ink/30"
+                  className="min-w-0 flex-1 bg-transparent px-4 py-3 font-mono text-xs tracking-[0.2em] outline-none placeholder:text-ink/30"
                 />
                 <button
                   type="submit"
@@ -122,6 +122,17 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col gap-4 border-t border-hairline py-6 font-mono text-xs tracking-[0.2em] text-ink/40 md:flex-row md:items-center md:justify-between">
           <span>© 2025 Wassim Asraf. All rights reserved.</span>
+          <span>
+            Powered by{" "}
+            <a
+              href="https://debajoyti.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-ink/70"
+            >
+              Debajoyti Paul
+            </a>
+          </span>
           <div className="flex gap-6">
             <span>Cairo · GMT+2</span>
             <span>Available worldwide</span>

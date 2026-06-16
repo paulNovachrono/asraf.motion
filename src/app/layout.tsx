@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wassim Asraf — Motion. Content. Results.",
+  title: "Wassim Asraf, Motion. Content. Results.",
   description:
     "Social Media Manager, Motion Designer & Video Editor. Based in Cairo, working globally.",
+  icons: [{ rel: "icon", url: "/icon.svg", type: "image/svg+xml" }],
 };
 
 export default function RootLayout({
@@ -30,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full overflow-x-hidden bg-canvas text-ink">
+      <body className="min-h-full overflow-x-hidden bg-canvas text-ink [scrollbar-gutter:stable]" suppressHydrationWarning>
         <KymaNav />
         <main className="flex-1">{children}</main>
         <Footer />

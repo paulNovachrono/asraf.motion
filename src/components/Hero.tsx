@@ -45,9 +45,9 @@ export default function Hero() {
           backgroundSize: "24px 24px",
         }}
       />
-      <div className="relative z-10 px-6 text-center">
+      <div className="relative z-10 px-6 text-center font-mono">
         <div ref={wordsRef} className="flex flex-col items-center">
-          <span className="block text-[clamp(3rem,12vw,7rem)] font-light leading-[0.95] tracking-[-1.72px]">
+          <span className="block text-[clamp(3rem,12vw,7rem)] font-light leading-[0.95] tracking-[-1.72px] ">
             MOTION.
           </span>
           <span className="block text-[clamp(3rem,12vw,7rem)] font-light leading-[0.95] tracking-[-1.72px] text-block bg-block-lilac">
